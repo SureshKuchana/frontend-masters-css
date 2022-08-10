@@ -39,3 +39,69 @@ You should now be able to access each of the sections:
   <li><a href="/06-reactive/">Lesson 06: Reactive Animations</a></li>
   <li><a href="/examples/inflight/">Inflight Example</a></li>
 </ul>
+
+#### CSS allows animation of HTML elements without using JavaScript or Flash!
+
+- @keyframes
+- animation-name
+- animation-duration
+- animation-delay
+- animation-iteration-count
+- animation-direction
+- animation-timing-function
+- animation-fill-mode
+- animation
+
+above properties are the animation property.
+
+```
+// sample example
+h1 {
+  animation: slide-right 1s linear infinite;
+}
+
+@keyframes slide-right {
+  from {
+    transform: translateX(ease 1s);
+  }
+  to {
+    transform: translateX(50vw);
+  }
+}
+```
+
+#### CSS Variables
+
+you can actually define custom css variables inside any selector's html, body.
+To use the custom css varible `color : var(--primary-color)`
+you can override the variable value `--primary-color : "red"`
+
+### CSS Transitions
+
+`transition-property: background, transform`
+`transition-timing-function: linear, ease-in-out`
+`transition-duration: 1s, 2s`
+
+or
+
+`transition: all 2s 0.5s ease-in-out`
+
+```
+// sample example
+transition-property: background, transform;
+transition-timing-function: linear, ease-in-out;
+transition-duration: 1s 0.5s;
+
+// transition-duration: 0;
+// NOTE : you cannot do transition-duration: 0, it might cause animation break
+
+&:hover {
+  transition-duration: 1s 0.5s;
+  background: blue;
+  transform: scale(2);
+}
+
+<!-- when i hove over on the ball it is immediatley
+  transition to blue
+ -->
+```

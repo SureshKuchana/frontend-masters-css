@@ -1,7 +1,11 @@
-@import './styles/base.scss';
+@import "./styles/base.scss";
+
+:root {
+  --primary-color: rgb(145, 79, 236);
+}
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   padding: 5vmin;
   background-color: #f4f4f4;
 }
@@ -11,6 +15,7 @@ a {
 }
 
 h1 {
+  color: var(--primary-color);
   margin: 0;
 }
 
@@ -28,4 +33,14 @@ ul {
   width: 5vmin;
   border-radius: 50%;
   background: radial-gradient(circle at bottom right, #fb2324, #fe932a);
+  // animation: slide-right 1s linear infinite;
 }
+
+// @keyframes slide-right {
+//   from {
+//     transform: translateX(ease 1s);
+//   }
+//   to {
+//     transform: translateX(50vw);
+//   }
+// }
